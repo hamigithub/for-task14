@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+@import "bs","reset","global";
+
+.main{
+  font-size: 1.6rem;
+}
+.title{
+  p{
+    padding:2rem 0;
+    margin:0 15px;
+    border-bottom: 1px solid #d0d6d9;
+  }
+
+  a{
+    display: inline-block;
+    color: #000;
+    margin: 0 1rem;
+
+    &:hover{
+      background: #29b078;
+      color: #fff;
+    }
+  }
+}
+
+.title-midle span{
+  color: #ccc;
+}
+.title-up span{
+  color: #29b078;
+}
+
+/*
+*div画table开始
+*/
+.tap-wrap{
+  font-size: 1.3rem;
+}
+.tab{
+  box-shadow: 0 0 10px #ccc;
+  background: #fff;
+  margin: 2rem 0;
+  position: relative;
+
+  &:hover .tab-fade{
+    display: block;
+  }
+}
+.tab-1 img{
+  float: left;
+  margin: 0.5rem;
+}
+.text-wrap{
+  padding: 0.5rem;
+
+  h4{
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+  }
+}
+.tab-2,.tab-3,.tab-5{
+  color: #999;
+}
+.tab-2{
+  clear: both;
+  div{
+    float: left;
+    width:50%;
+    padding: 1rem 0.5rem;
+    border-top: 1px solid #ccc;
+  }
+
+  img{
+    margin: -5px 0 0 5px;
+  }
+
+  span{
+    color: #f01400;
+  }
+}
+.tab-2-right{
+  border-left: 1px solid #ccc;
+}
+.tab-3-left{
+  width: 40%;
+  float:left;
+  height: 9rem;
+  line-height: 9rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.tab-3-right{
+  width: 60%;
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding-right:15px;
+  padding-left: 30px;
+  color: #000;
+
+  span{
+    float: right;
+  }
+}
+
+.tab-4 ,.tab-5{
+  border-top: 1px solid #ccc;
+  clear: both;
+  padding: 1rem 15px;
+}
+
+.tab-4{
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  span{
+    color: #f01400;
+  }
+}
+
+/*
+*透明层fade开始
+*/
+.tab-fade{
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 4rem;
+  display: none;
+  animation: fade 5s;
+  @keyframes fade {
+    from{background: rgba(0,0,0,0.1)}
+    to{background: rgba(0,0,0,0.8)}
+ }
+  h4{
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  p{
+    text-indent: 2em;
+    font-size: 15px;
+  }
+}

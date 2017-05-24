@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/*
+*仿BS container
+*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    /*页面宽度大于768px时盒子宽度*/ } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    /*页面宽度大于992px时盒子宽度*/ } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    /*页面宽度大于1200px时盒子宽度 		设置时注意代码顺序、执行顺序不一致将导致代码不生效 */ } }
+/*
+*仿BS row
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*column百分比宽度计算时不计算父容器内外边距，width百分比可以沾满一行而不溢出*/
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.row:before, .row:after, .container:before, .container:after {
+  display: table;
+  content: " "; }
+
+/*解决子元素float后撑不开父元素的问题,CSS3清除浮动大法*/
+.row:after, .container:after {
+  clear: both; }
+
+/*解决子元素float后撑不开父元素的问题，CSS3清除浮动大法*/
+/*
+*仿BS column
+*/
+.col-md-4, .col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left; }
+
+.col-xs-12 {
+  width: 100%; }
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 33.3333%; } }
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, lengend, button, input, textarea,
+th, td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0; }
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+  /* 用 ascii 字符表示，使得在任何编码下都无问题 */ }
+
+h1 {
+  font-size: 18px;
+  /* 18px / 12px = 1.5 */ }
+
+h2 {
+  font-size: 16px; }
+
+h3 {
+  font-size: 14px; }
+
+h4, h5, h6 {
+  font-size: 100%; }
+
+address, cite, dfn, em, var {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+  font-family: "Courier New", Courier, monospace; }
+
+/* 统一等宽字体 */
+small {
+  font-size: 12px; }
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol {
+  list-style: none; }
+
+/* 重置文本格式元素 */
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+abbr[title], acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+q:before, q:after {
+  content: ''; }
+
+/* 重置表单元素 */
+legend {
+  color: #000; }
+
+/* for ie6 */
+fieldset, img {
+  border: none; }
+
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */ }
+
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px; }
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+  overflow-y: scroll;
+  font-size: 62.5%; }
+
+/*顶部雪碧图a标签*/
+.toplink {
+  font-size: 1.5rem;
+  color: #29b078; }
+
+.topa {
+  padding: 1rem 15px; }
+  .topa a {
+    margin-left: 1rem;
+    float: right;
+    background-image: url(../images/sprite.png); }
+
+@media screen and (max-width: 768px) {
+  .topa span {
+    display: none; } }
+._3 {
+  height: 24px;
+  width: 25px;
+  background-position: -52px 0; }
+
+._2 {
+  height: 24px;
+  width: 25px;
+  background-position: -26px 0; }
+
+._1 {
+  height: 24px;
+  width: 25px;
+  background-position: 0 0; }
+
+/*nav*/
+.downa-wrap {
+  font-size: 1.5rem;
+  background: #29b078; }
+
+.downa {
+  padding: 0 15px; }
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+  min-height: 54px; }
+
+.navbar-default {
+  background-color: #29b078;
+  border-color: transparent; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar-default .navbar-nav > li:hover {
+  border-bottom: 2px solid #fff; }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #fff;
+  border-radius: 4px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #888; }
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px; }
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: block; }
+
+  .navbar-toggle {
+    display: none; } }
+.button1 {
+  text-align: center;
+  padding: 1.53rem 1rem; }
+
+@media (min-width: 768px) {
+  .nav {
+    float: right;
+    margin: 0; }
+
+  .button1 {
+    display: inline-block; } }
+@media (min-width: 768px) {
+  .navbar-img-up {
+    display: none; }
+
+  .navbar-img-down {
+    margin-left: 0; } }
+@media screen and (max-width: 768px) {
+  .navbar-img-down {
+    display: none; }
+
+  .navbar-collapse {
+    display: none; } }
+.navbar-nav {
+  margin: 0; }
+
+.navbar-default:hover .navbar-collapse {
+  display: block; }
+
+/*
+*脚部开始
+*/
+.footer {
+  font-size: 1.5rem;
+  color: #fff;
+  background: #26a26f;
+  padding-top: 2rem;
+  clear: both; }
+  .footer a {
+    color: #fff; }
+    .footer a:hover {
+      text-decoration: underline; }
+  .footer > p {
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid #32c086;
+    padding: 0.5rem 0;
+    margin-bottom: 0; }
+
+.footer-wrap {
+  padding-bottom: 1rem; }
+
+.footer-left-p-up {
+  margin-bottom: 5.5rem; }
+
+.footer-left-p-down span {
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 1px solid #fff; }
+
+.footer-center p, .footer-left-p-down {
+  margin-bottom: 2rem; }
+
+.footer-center span {
+  margin-left: 2rem; }
+
+.footer-right {
+  text-align: right; }
+  @media screen and (max-width: 992px) {
+    .footer-right {
+      text-align: left; } }
+
+.main {
+  font-size: 1.6rem; }
+
+.title p {
+  padding: 2rem 0;
+  margin: 0 15px;
+  border-bottom: 1px solid #d0d6d9; }
+.title a {
+  display: inline-block;
+  color: #000;
+  margin: 0 1rem; }
+  .title a:hover {
+    background: #29b078;
+    color: #fff; }
+
+.title-midle span {
+  color: #ccc; }
+
+.title-up span {
+  color: #29b078; }
+
+/*
+*div画table开始
+*/
+.tap-wrap {
+  font-size: 1.3rem; }
+
+.tab {
+  box-shadow: 0 0 10px #ccc;
+  background: #fff;
+  margin: 2rem 0;
+  position: relative; }
+  .tab:hover .tab-fade {
+    display: block; }
+
+.tab-1 img {
+  float: left;
+  margin: 0.5rem; }
+
+.text-wrap {
+  padding: 0.5rem; }
+  .text-wrap h4 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 1rem 0; }
+
+.tab-2, .tab-3, .tab-5 {
+  color: #999; }
+
+.tab-2 {
+  clear: both; }
+  .tab-2 div {
+    float: left;
+    width: 50%;
+    padding: 1rem 0.5rem;
+    border-top: 1px solid #ccc; }
+  .tab-2 img {
+    margin: -5px 0 0 5px; }
+  .tab-2 span {
+    color: #f01400; }
+
+.tab-2-right {
+  border-left: 1px solid #ccc; }
+
+.tab-3-left {
+  width: 40%;
+  float: left;
+  height: 9rem;
+  line-height: 9rem;
+  text-align: center;
+  border-top: 1px solid #ccc; }
+
+.tab-3-right {
+  width: 60%;
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding-right: 15px;
+  padding-left: 30px;
+  color: #000; }
+  .tab-3-right span {
+    float: right; }
+
+.tab-4, .tab-5 {
+  border-top: 1px solid #ccc;
+  clear: both;
+  padding: 1rem 15px; }
+
+.tab-4 {
+  font-weight: bold;
+  font-size: 1.5rem; }
+  .tab-4 span {
+    color: #f01400; }
+
+/*
+*透明层fade开始
+*/
+.tab-fade {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 4rem;
+  display: none;
+  animation: fade 5s; }
+@keyframes fade {
+  from {
+    background: rgba(0, 0, 0, 0.1); }
+  to {
+    background: rgba(0, 0, 0, 0.8); } }
+  .tab-fade h4 {
+    text-align: center;
+    margin: 2rem 0; }
+  .tab-fade p {
+    text-indent: 2em;
+    font-size: 15px; }
+
+/*# sourceMappingURL=main3.css.map */
