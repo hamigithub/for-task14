@@ -1,0 +1,70 @@
+@charset "utf-8";
+/*
+*仿BS container
+*/
+.container{
+  padding-left: 15px;
+  padding-right:15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container{
+    width:750px;             /*页面宽度大于768px时盒子宽度*/
+  }
+}
+@media (min-width: 992px) {
+  .container{
+    width:970px;             /*页面宽度大于992px时盒子宽度*/
+  }
+}
+@media (min-width: 1200px) {
+  .container{
+    width:1170px;             /*页面宽度大于1200px时盒子宽度 		设置时注意代码顺序、执行顺序不一致将导致代码不生效 */
+  }
+}
+
+/*
+*仿BS row
+*/
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}/*column百分比宽度计算时不计算父容器内外边距，width百分比可以沾满一行而不溢出*/
+.row{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row:before,.row:after,.container:before,.container:after{
+  display: table;
+  content: " ";
+}/*解决子元素float后撑不开父元素的问题,CSS3清除浮动大法*/
+.row:after,.container:after{
+  clear: both;
+}/*解决子元素float后撑不开父元素的问题，CSS3清除浮动大法*/
+/*
+*仿BS column
+*/
+.col-md-4,.col-xs-12{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left;
+}
+.col-xs-12{
+  width: 100%;
+}
+@media (min-width: 992px){
+  .col-md-4{
+
+    width: 33.3333%;
+  }
+}
+
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
