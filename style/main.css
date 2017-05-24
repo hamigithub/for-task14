@@ -90,6 +90,312 @@ hr {
 
 /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
 html {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  font-size: 62.5%; }
+
+/*
+*仿BS container
+*/
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    /*页面宽度大于768px时盒子宽度*/ } }
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    /*页面宽度大于992px时盒子宽度*/ } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    /*页面宽度大于1200px时盒子宽度 		设置时注意代码顺序、执行顺序不一致将导致代码不生效 */ } }
+/*
+*仿BS row
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*column百分比宽度计算时不计算父容器内外边距，width百分比可以沾满一行而不溢出*/
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.row:before, .row:after, .container:before, .container:after {
+  display: table;
+  content: " "; }
+
+/*解决子元素float后撑不开父元素的问题,CSS3清除浮动大法*/
+.row:after, .container:after {
+  clear: both; }
+
+/*解决子元素float后撑不开父元素的问题，CSS3清除浮动大法*/
+/*
+*仿BS column
+*/
+.col-md-4, .col-xs-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  float: left; }
+
+.col-xs-12 {
+  width: 100%; }
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 33.3333%; } }
+:after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*顶部雪碧图a标签*/
+.toplink {
+  font-size: 1.5rem;
+  color: #29b078; }
+
+.topa {
+  padding: 1rem 15px; }
+  .topa a {
+    margin-left: 1rem;
+    float: right;
+    background-image: url(../images/sprite.png); }
+
+@media screen and (max-width: 768px) {
+  .topa span {
+    display: none; } }
+._3 {
+  height: 24px;
+  width: 25px;
+  background-position: -52px 0; }
+
+._2 {
+  height: 24px;
+  width: 25px;
+  background-position: -26px 0; }
+
+._1 {
+  height: 24px;
+  width: 25px;
+  background-position: 0 0; }
+
+/*nav*/
+.downa-wrap {
+  font-size: 1.5rem;
+  background: #29b078; }
+
+.downa {
+  padding: 0 15px; }
+
+.navbar {
+  border-radius: 0px;
+  margin-bottom: 0;
+  min-height: 54px; }
+
+.navbar-default {
+  background-color: #29b078;
+  border-color: transparent; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar-default .navbar-nav > li:hover {
+  border-bottom: 2px solid #fff; }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #fff;
+  border-radius: 4px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #888; }
+
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px; }
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: block; }
+
+  .navbar-toggle {
+    display: none; } }
+.button1 {
+  text-align: center;
+  padding: 1.53rem 1rem; }
+
+@media (min-width: 768px) {
+  .nav {
+    float: right;
+    margin: 0; }
+
+  .button1 {
+    display: inline-block; } }
+@media (min-width: 768px) {
+  .navbar-img-up {
+    display: none; }
+
+  .navbar-img-down {
+    margin-left: 0; } }
+@media screen and (max-width: 768px) {
+  .navbar-img-down {
+    display: none; }
+
+  .navbar-collapse {
+    display: none; } }
+.navbar-nav {
+  margin: 0; }
+
+.navbar-default:hover .navbar-collapse {
+  display: block; }
+
+/*
+*脚部开始
+*/
+.footer {
+  font-size: 1.5rem;
+  color: #fff;
+  background: #26a26f;
+  padding-top: 2rem;
+  clear: both; }
+  .footer a {
+    color: #fff; }
+    .footer a:hover {
+      text-decoration: underline; }
+  .footer > p {
+    font-size: 1.2rem;
+    text-align: center;
+    border-top: 1px solid #32c086;
+    padding: 0.5rem 0;
+    margin-bottom: 0; }
+
+.footer-wrap {
+  padding-bottom: 1rem; }
+
+.footer-left-p-up {
+  margin-bottom: 5.5rem; }
+
+.footer-left-p-down span {
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 1px solid #fff; }
+
+.footer-center p, .footer-left-p-down {
+  margin-bottom: 2rem; }
+
+.footer-center span {
+  margin-left: 2rem; }
+
+.footer-right {
+  text-align: right; }
+  @media screen and (max-width: 992px) {
+    .footer-right {
+      text-align: left; } }
+
+.banner img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  width: 100%;
+  vertical-align: middle; }
+
+/*banner图结束*/
+.container .cln {
+  font-size: 1.5rem;
+  padding: 2rem 1rem; }
+
+.cln span {
+  color: #29b078; }
+
+.sidebar {
+  display: inline-block;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+  width: 24%; }
+  .sidebar h4 {
+    padding: 1.5rem 0 1.5rem 33%;
+    font-size: 2rem; }
+  .sidebar li {
+    margin: 1.5rem 0 1.5rem 40%;
+    font-size: 1.5rem;
+    list-style-image: url("../images/light2.png"); }
+    .sidebar li:hover {
+      list-style-image: url("../images/light.png"); }
+  .sidebar a {
+    padding: 1.5rem 0;
+    color: #29b078; }
+    .sidebar a:hover {
+      color: #f3a846; }
+  .sidebar .sidebar h4, .sidebar .column-div {
+    border-bottom: 1px solid #ccc; }
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    margin: 0 -15px; }
+
+  .line {
+    margin-left: 15px; }
+
+  .sidebar h4 {
+    padding-left: 40%; }
+
+  .sidebar li {
+    margin-left: 42%; } }
+.column {
+  font-size: 1.5rem;
+  float: right;
+  margin-right: 15px;
+  margin-bottom: 16rem;
+  width: 70%;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc; }
+
+.column-div img {
+  float: left; }
+
+.column-div p, .column > p {
+  padding: 2rem 5rem;
+  color: #999; }
+
+.column-div p {
+  padding-top: 6rem; }
+
+.column > p {
+  text-indent: 2em; }
+
+@media screen and (max-width: 768px) {
+  .column {
+    float: none;
+    width: 100%;
+    margin: 2rem -15px; } }
 
 /*# sourceMappingURL=main.css.map */
