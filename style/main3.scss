@@ -24,12 +24,25 @@
   }
 }
 
-.title-midle span{
-  color: #ccc;
+.title-midle {
+  margin: 2rem 1rem;
+  span{
+    color: #ccc;
+  }
+}
+
+.title-midle-div{
+  margin-left: 4rem;
+  display: inline-block;
+
+  a{
+    margin: 1rem ;
+  }
 }
 .title-up span{
   color: #29b078;
 }
+
 
 /*
 *div画table开始
@@ -111,6 +124,7 @@
   border-top: 1px solid #ccc;
   clear: both;
   padding: 1rem 15px;
+  line-height: 1.6rem;
 }
 
 .tab-4{

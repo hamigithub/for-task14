@@ -93,6 +93,9 @@ html {
   overflow-y: scroll;
   font-size: 62.5%; }
 
+p {
+  line-height: 1.8rem; }
+
 /*
 *仿BS container
 */
@@ -202,6 +205,11 @@ body {
 
 .downa {
   padding: 0 15px; }
+  .downa a:hover {
+    text-decoration: none; }
+  .downa img {
+    vertical-align: middle;
+    margin-top: .3rem; }
 
 .navbar {
   border-radius: 0px;
@@ -222,7 +230,7 @@ body {
   position: relative;
   float: right;
   padding: 9px 10px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-right: 15px;
   margin-bottom: 8px;
   background-color: #fff;
@@ -258,7 +266,8 @@ body {
     display: none; } }
 .button1 {
   text-align: center;
-  padding: 1.53rem 1rem; }
+  padding: 1.53rem 1rem;
+  margin: 0 -15px; }
 
 @media (min-width: 768px) {
   .nav {
@@ -266,7 +275,8 @@ body {
     margin: 0; }
 
   .button1 {
-    display: inline-block; } }
+    display: inline-block;
+    margin: 0; } }
 @media (min-width: 768px) {
   .navbar-img-up {
     display: none; }
