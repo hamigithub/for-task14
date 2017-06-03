@@ -197,6 +197,8 @@ body {
 .downa-wrap {
   font-size: 1.5rem;
   background: #29b078; }
+  .downa-wrap a {
+    color: #fff; }
 
 .downa {
   padding: 0 15px; }
@@ -213,7 +215,7 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #fff; }
 
-.navbar-default .navbar-nav > li:hover {
+.button1:hover {
   border-bottom: 2px solid #fff; }
 
 .navbar-toggle {
