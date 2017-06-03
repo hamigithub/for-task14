@@ -46,7 +46,7 @@
 /*
 *仿BS column
 */
-.col-md-4,.col-xs-12{
+.col-md-3,.col-md-4,.col-xs-12{
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -60,6 +60,9 @@
   .col-md-4{
 
     width: 33.3333%;
+  }
+  .col-md-3{
+    width: 25%;
   }
 }
 
